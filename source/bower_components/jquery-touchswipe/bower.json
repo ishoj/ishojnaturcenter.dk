@@ -1,0 +1,6 @@
+{
+  "name": "jquery-touchswipe",
+  "main": "./jquery.touchSwipe.js",
+  "repository": {
+    "type": "git"  }
+}
