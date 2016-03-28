@@ -31,6 +31,5 @@
   },
   "_source": "git://github.com/liabru/jquery-match-height.git",
   "_target": "^0.7.0",
-  "_originalSource": "matchheight",
-  "_direct": true
+  "_originalSource": "matchheight"
 }
