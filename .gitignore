@@ -9,3 +9,6 @@ logs
 os2web-deploy
 tmp
 vendor
+public_html/sites/*/settings*.php
+public_html/sites/*/files
+public_html/sites/*/private
