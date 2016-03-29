@@ -5,3 +5,7 @@ dist
 .sass-cache
 test/bower_components
 .DS_Store
+logs
+os2web-deploy
+tmp
+vendor
