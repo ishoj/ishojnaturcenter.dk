@@ -83,6 +83,7 @@
 
 
 <?php
+dsm($node);
 
 $output = "";
 
@@ -161,7 +162,37 @@ $output .= "<section id=\"node-" . $node->nid . "\" class=\"" . $classes . " art
         $output .= "<!-- TEKSTINDHOLD START -->";
         hide($content['comments']);
         hide($content['links']);
-        $output .= render($content);
+        // $output .= render($content);
+
+          // body
+          if($node->body) {
+            $output .= $node->body['und'][0]['safe_value'];
+          }
+
+          // Alderstrin
+          if($node->field_ture_alderstrin) {
+            $output .= "<h3>Alderstrin</h3>";
+            $output .= "<p>" . $node->field_ture_alderstrin['und'][0]['safe_value'] . "</p>";
+          }
+
+          // Periode
+          if($node->field_tur_periode) {
+            $output .= "<h3>Periode</h3>";
+            $output .= "<p>" . $node->field_tur_periode['und'][0]['safe_value'] . "</p>";
+          }
+
+          // Læringsmål
+          if($node->field_l_ringsm_l) {
+            $output .= "<h3>Læringsmål</h3>";
+            $output .= $node->field_l_ringsm_l['und'][0]['safe_value'];
+          }
+
+          // Fagligt ophæng
+          if($node->field_turefagligt_oph_ng2) {
+            $output .= "<h3>Fagligt ophæng</h3>";
+            $output .= $node->field_turefagligt_oph_ng2['und'][0]['safe_value'];
+          }
+
         $output .= "<!-- TEKSTINDHOLD SLUT -->";
 
         // MIKROARTIKLER
