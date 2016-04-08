@@ -289,6 +289,10 @@ $output .= "<section id=\"node-" . $node->nid . "\" class=\"" . $classes . " art
         if($node->nid == 1640) {
           $output .= views_embed_view('ture_ish_j_naturcenter_sfoer','default');
         }
+        // Offentlig ture
+        if($node->nid == 1629) {
+          $output .= json_aktivitetsliste('3121'); // Arrangør: Ishøj Naturcenter = tid 3121
+        }
 
 
         // ----------- //

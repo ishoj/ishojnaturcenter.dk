@@ -78,7 +78,232 @@
 
 }
 
+.aktivitetsliste {
+  width: 100%;
+  float: left;
+  margin-bottom: 3em;
+  @media screen and (min-width: $bp-small-2) { // 600 px
+    background: {
+      image: url(../images/sprites-no/activities_line.png);
+      repeat: repeat-y;
+      position: calc-em(140px) 0;
+    }
+  }
 
+  .aktivitet {
+    width: 100%;
+    float: left;
+    margin-bottom: 2em;
+    // DATO
+    .date {
+      position: relative;
+      margin:0 auto;
+      width: 100%;
+      max-width: calc-em(90px);
+      background: $color-blue-normal;
+      text-align: center;
+      line-height: 260%;
+      font: {
+        size: calc-em(20px);
+        weight: 300;
+      }
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: calc-em(1px);
+      @include border-radius(calc-em(2px));
+
+      &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border: {
+          top-color: $color-blue-normal;
+          width: calc-em(8px);
+        }
+        margin-left: calc-em(-8px);
+      }
+      &.long {
+        max-width: 8.25em;
+      }
+      &.extra-long {
+        max-width: 10.75em;
+      }
+    }
+    // BESKRIVELSE
+    .description {
+      position: relative;
+      background: $color-light-gray-light;
+      width: 100%;
+      padding: 0 calc-em(18px) calc-em(18px) calc-em(18px);
+      @include border-radius(calc-em(2px));
+      &:after,
+      &:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      &:after {
+        border: {
+          bottom-color: $color-light-gray-light;
+          width: calc-em(12px);
+        }
+        margin-left: calc-em(-12px);
+      }
+      &:before {
+        border: {
+          // bottom-color: $color-white;
+          width: calc-em(14px);
+        }
+        margin-left: calc-em(-14px);
+      }
+      @media screen and (min-width: $bp-large) { // 960 px
+        margin-bottom: 2.0em;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      h3 {
+        font-size: calc-em(24px);
+        margin-bottom: 0;
+        margin-top: 1em;
+      }
+      span {
+        font-weight: 400;
+      }
+      ul {
+        list-style: none;
+        margin-left: calc-em(12px);
+      }
+    }
+    // CIRKEL
+    .circle {
+      position: relative;
+      width: calc-em(18px);
+      height: calc-em(18px);
+      margin: calc-em(15px) auto calc-em(20px) auto;
+      background: $color-white;
+      @include border-radius(calc-em(9px));
+      > div {
+        float:left;
+        width: calc-em(8px);
+        height: calc-em(8px);
+        margin:  calc-em(5px);
+        background: $color-blue-normal;
+        @include border-radius(calc-em(4px));
+      }
+    }
+    @media screen and (min-width: $bp-small-2) { // 600 px
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      // DATO
+      .date {
+        float: left;
+        margin: calc-em(22px) calc-em(18px) 0 0;
+        &:after {
+          left: 100%;
+          top: 50%;
+          border: solid transparent;
+        }
+        &:after {
+          border: {
+            left-color: $color-blue-normal;
+            width: calc-em(8px);
+          }
+          margin-top: calc-em(-8px);
+          margin-left: 0;
+        }
+      }
+      // CIRKEL
+      .circle {
+        float: left;
+        margin: calc-em(45px) 0;
+        > div {
+          float:left;
+          width: calc-em(8px);
+          height: calc-em(8px);
+          margin:  calc-em(5px);
+        }
+      }
+      // BESKRIVELSE
+      .description {
+        float: right;
+        width: 68%;
+        margin: 0;
+        &:after {
+          left: calc-em(-12px);
+          top: calc-em(54px);
+          border: solid transparent;
+          border-right-color: $color-light-gray-light;
+          border-width: calc-em(12px);
+          margin-top: calc-em(-12px);
+        }
+      }
+    }
+    @media screen and (min-width: $bp-medium-1) { // 700 px
+      // BESKRIVELSE
+      .description {
+        width: 73%;
+      }
+    }
+    @media screen and (min-width: $bp-medium-2) { // 768 px
+      // BESKRIVELSE
+      .description {
+        width: 60%;
+      }
+    }
+    @media screen and (min-width: $bp-medium-3) { // 832 px
+      // BESKRIVELSE
+      .description {
+        width: 64%;
+      }
+    }
+    @media screen and (min-width: $bp-large) { // 960 px
+      // BESKRIVELSE
+      .description {
+        width: 69%;
+      }
+    }
+    @media screen and (min-width: $bp-large-2) { // 1024 px
+      // BESKRIVELSE
+      .description {
+        width: 70%;
+      }
+    }
+    @media screen and (min-width: $bp-large-3) { // 1152 px
+      // BESKRIVELSE
+      .description {
+        width: 74%;
+      }
+    }
+    @media screen and (min-width: $bp-xlarge) { // 1280 px
+      // BESKRIVELSE
+      .description {
+        width: 76%;
+      }
+    }
+    @media screen and (min-width: $bp-xlarge-2) { // 1440 px
+      // BESKRIVELSE
+      .description {
+        width: 78%;
+      }
+    }
+
+  }
+}
 
 
 // HEADER

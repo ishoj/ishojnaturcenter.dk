@@ -201,7 +201,7 @@ if ($_GET['nid'] and $_GET['ds']) {
                   // $output .= "<h1>" . $title . "</h1>";
                 $output .= "</div>";
                 // ----------------
-                $output .= "<div class=\"grid-third sociale-medier social-desktop\"></div>";
+                $output .= "<div class=\"grid-third\"></div>";
               $output .= "</div>";
 
               /////////////////////
