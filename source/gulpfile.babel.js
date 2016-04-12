@@ -90,10 +90,13 @@ gulp.task('extras', () => {
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('../public_html/sites/all/themes/ishoj/dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', '../public_html/sites/all/themes/ishoj/dist']));
+gulp.task('clean', del.bind(null, ['.tmp', '../public_html/sites/all/themes/ishoj/dist'], {force: true})
+  // .pipe(clean({force: true}))
+);
+
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
