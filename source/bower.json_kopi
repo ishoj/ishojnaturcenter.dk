@@ -2,6 +2,7 @@
   "name": "naturcenter-ishoj-dk",
   "private": true,
   "dependencies": {
+    "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
     "matchHeight": "matchheight#^0.7.0"
   },
