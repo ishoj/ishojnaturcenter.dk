@@ -47,7 +47,7 @@ function ishoj_preprocess_page(&$variables) {
   // Hvis brugeren er logget på (webredaktør-rolle)
   if($variables['logged_in']) {
     // Indlæs editor.css
-    drupal_add_css (path_to_theme() . '/static/styles/editor.css', array('type' => 'file'));
+    drupal_add_css (path_to_theme() . '/dist/styles/editor.css', array('type' => 'file'));
     // Indlæs editor.js
     drupal_add_js(drupal_get_path('theme', 'ishoj') . '/static/scripts/editor.js');
   }

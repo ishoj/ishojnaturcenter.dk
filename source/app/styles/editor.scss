@@ -4,14 +4,14 @@
 	"config";
 //	"mixins",
 //	"components/reset";
-  
+
 
 /************************/
 /*** ADMIN STYLESHEET ***/
 /************************/
 
 // Rediger node knap
-.edit-node { 
+.edit-node {
   float: left;
   margin-top: 1em;
   background: $color-yellow-normal;
@@ -29,13 +29,13 @@
     color: $color-gray-dark !important;
 //    font-size: 1.25em;
     font-weight: 400;
-    background:url(../images/sprites-no/editor/editor_btn_edit.png) left no-repeat; 
+    background:url(../images/sprites-no/editor/editor_btn_edit.png) left no-repeat;
     background-position:12px 0px;
     &:hover {
       text-decoration: none;
     }
     span {
-      padding-left: 2.25em; 
+      padding-left: 2.25em;
 
     }
   }
@@ -44,100 +44,100 @@
 
 
 
-/* Redaktørmenu */ 
+/* Redaktørmenu */
 .redaktormenu  {
   padding-bottom: 0;
 }
 
-.editor ul.menu .leaf  { 
-  list-style:none; 
+.editor ul.menu .leaf  {
+  list-style:none;
 } /* Drupal fix */
 
-.editor { 
+.editor {
   float: left;
   width: 100%;
   display: block;
-  background: $color-yellow-normal; 
-  font-weight: 300; 
+  background: $color-yellow-normal;
+  font-weight: 300;
   padding-top: 0;
   padding-bottom: 0;
-  
-  .editorInner, 
-  .editorInner div { 
-    float: left; 
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
+
+  .editorInner,
+  .editorInner div {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  
+
   /* 1st level*/
-  .menu { 
-    float: left; 
-    margin: 0; 
-    padding: 0; 
-    li  { 
-      float: left; 
-      height: 100%; 
-      display: block; 
-      cursor: pointer; 
-      background: none; 
-      margin: 0; 
-      padding: 0; 
+  .menu {
+    float: left;
+    margin: 0;
+    padding: 0;
+    li  {
+      float: left;
+      height: 100%;
+      display: block;
+      cursor: pointer;
+      background: none;
+      margin: 0;
+      padding: 0;
       &:hover {
         background: $color-gray-dark;
         a {
           color: $color-white;
         }
-        ul { 
-          left:auto; 
+        ul {
+          left:auto;
         }
       }
       a {
-        width: auto; 
-        height: 100%; 
-        display: block; 
+        width: auto;
+        height: 100%;
+        display: block;
         color: $color-gray-dark;
-        text-decoration: none; 
-        font-size: 1.25em; 
-        font-weight: 400; 
-        padding: 0.75em 1.5em; 
-        cursor: pointer; 
-        letter-spacing: 0.125em; 
-        text-transform: uppercase;  
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: 400;
+        padding: 0.75em 1.5em;
+        cursor: pointer;
+        letter-spacing: 0.125em;
+        text-transform: uppercase;
       }
-      &.active:hover { 
+      &.active:hover {
         background: $color-gray-dark;
         a {
           color: $color-white;
         }
       }
-      ul { 
-        position: absolute; 
-        z-index: 100; 
-        width: 16em;  
-        height: auto; 
-        left: -999em; 
-        padding: 1.0em; 
-        background: $color-gray-dark; 
-        li { 
-          width: 100%; 
-          height: 3em; 
-          border: none; 
-          border-top: 1px solid $color-gray-light; 
-          &:nth-child(1) { 
-            border: none; 
-          } 
-          &:hover { 
-            background: $color-white; 
+      ul {
+        position: absolute;
+        z-index: 100;
+        width: 16em;
+        height: auto;
+        left: -999em;
+        padding: 1.0em;
+        background: $color-gray-dark;
+        li {
+          width: 100%;
+          height: 3em;
+          border: none;
+          border-top: 1px solid $color-gray-light;
+          &:nth-child(1) {
+            border: none;
+          }
+          &:hover {
+            background: $color-white;
             a {
               color: $color-gray-dark;
-              
+
             }
             ul {
               width: 20em;
-              left: 17.0em !important; 
-              top: auto; 
+              left: 17.0em !important;
+              top: auto;
               margin-top: -4.0em;
               li {
                 &:hover {
@@ -149,23 +149,23 @@
             }
           }
           a {
-            font-size: 1.0em; 
-            font-weight: 300; 
-            line-height: 3em; 
-            padding: 0 1.0em 0 2.5em ; 
-            text-transform: none; 
-            color: $color-white; 
+            font-size: 1.0em;
+            font-weight: 300;
+            line-height: 3em;
+            padding: 0 1.0em 0 2.5em ;
+            text-transform: none;
+            color: $color-white;
             border: none;
           }
           ul {
-            position: absolute; 
-            z-index: 101; 
-            width: 18em; 
-            height: auto; 
-            left: -999em !important; 
+            position: absolute;
+            z-index: 101;
+            width: 18em;
+            height: auto;
+            left: -999em !important;
             padding: 1.0em;
             margin-left: -2em;
-            background: $color-gray-dark; 
+            background: $color-gray-dark;
             li {
               &:hover {
                 a {
@@ -173,30 +173,30 @@
                 }
               }
               a {
-                color: $color-white !important; 
+                color: $color-white !important;
                 border: none;
               }
             }
           }
-        } 
+        }
       }
     }
   }
 
-  
-} 
 
-
-
-
-.editor li.plus a, 
-.editor li.plus:hover li.plus a { 
-  background:url(../images/sprites-no/editor/editor_btn_plus.png) left no-repeat !important; 
-  background-position:6px -48px !important; 
 }
-.editor li.plus:hover a, 
-.editor li.plus:hover li.plus:hover a { 
-  background-position: 6px 0 !important; 
+
+
+
+
+.editor li.plus a,
+.editor li.plus:hover li.plus a {
+  background:url(../images/sprites-no/editor/editor_btn_plus.png) left no-repeat !important;
+  background-position:6px -48px !important;
+}
+.editor li.plus:hover a,
+.editor li.plus:hover li.plus:hover a {
+  background-position: 6px 0 !important;
 }
 
 .editor li.search a, .editor li.search:hover li.search a 		{ background:url(../images/sprites-no/editor/editor_btn_search.png) left no-repeat; background-position:6px -48px; }
@@ -216,5 +216,3 @@
 
 .editor li.adduser a, .editor li.adduser:hover li.adduser a { background:url(../images/sprites-no/editor/editor_btn_adduser.png) left no-repeat !important; background-position:6px -48px !important; }
 .editor li.adduser:hover a, .editor li.adduser:hover li.adduser:hover a { background-position:6px 0 !important; }
-
-

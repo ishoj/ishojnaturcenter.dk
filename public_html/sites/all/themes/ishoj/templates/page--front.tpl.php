@@ -175,12 +175,12 @@
               /////////////////////
               ////   RÆKKE 2   ////
               /////////////////////
-              $output .= "<div class=\"row second\">";
-                $output .= "<div class=\"grid-two-thirds\">";
+              // $output .= "<div class=\"row second\">";
+              //   $output .= "<div class=\"grid-two-thirds\">";
                   //   $output = $output . "<h1>" . $title . "</h1>";
-                $output .= "</div>";
-                $output .= "<div class=\"grid-third sociale-medier social-desktop\"></div>";
-              $output .= "</div>";
+              //   $output .= "</div>";
+              //   $output .= "<div class=\"grid-third sociale-medier social-desktop\"></div>";
+              // $output .= "</div>";
 
               /////////////////////
               ////   RÆKKE 3   ////
