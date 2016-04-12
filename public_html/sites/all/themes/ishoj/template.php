@@ -1,8 +1,5 @@
 <?php
 
-// DRUPAL SNIPPETS: http://dropbucket.org/
-
-
 /************************/
 /*** PREPROCESS THEME ***/
 /************************/
@@ -50,94 +47,9 @@ function ishoj_preprocess_page(&$variables) {
   // Hvis brugeren er logget på (webredaktør-rolle)
   if($variables['logged_in']) {
     // Indlæs editor.css
-    drupal_add_css (path_to_theme() . '/styles/editor.css', array('type' => 'file'));
+    drupal_add_css (path_to_theme() . '/static/styles/editor.css', array('type' => 'file'));
     // Indlæs editor.js
-    drupal_add_js(drupal_get_path('theme', 'ishoj') . '/scripts/editor.js');
-  }
-
-  ////////////////////
-  // I N F O - T V  //
-  ////////////////////
-  $variables['path_to_theme'] = drupal_get_path('theme', 'ishoj') . '/';
-  $path = drupal_get_path_alias();
-  $urlPath = $path;
-
-  // hvis path'en indeholder strengen 'infotv'
-  if(strpos($urlPath, 'infotv') !== false) {
-     $urlPath = 'infotv';
-  }
-  // hvis path'en indeholder strengen 'udvikling' og ikke indeholder strengen 'udvikling'
-//  if((strpos($urlPath, 'udvikling') !== false)) {
-//     $urlPath = 'udvikling';
-//  }
-  // hvis path'en indeholder strengen 'tvigrafik'
-//  if(strpos($urlPath, 'tvigrafik') !== false) {
-//     $urlPath = 'tvigrafik';
-//  }
-  // hvis path'en indeholder strengen 'uglentopnyheder'
-  if(strpos($urlPath, 'uglentopnyheder') !== false) {
-     $urlPath = 'uglentopnyheder';
-  }
-
-  switch ($urlPath) {
-
-//      case 'udvikling':
-//      drupal_static_reset('drupal_add_css');
-//      drupal_static_reset('drupal_add_js');
-
-      // Tilføjer styelsheets
-//      drupal_add_css($vars['path_to_theme'] . 'css/reset.css', array('group' => CSS_THEME, 'weight' => 100));
-//      drupal_add_css($vars['path_to_theme'] . 'css/flexslider.css', array('group' => CSS_THEME, 'weight' => 100));
-//      drupal_add_css($vars['path_to_theme'] . 'css/infotv.css', array('group' => CSS_THEME, 'weight' => 100));
-      // Tilføjer javascripts
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery-1.10.2.min.js', array('weight' => 1000));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.flexslider-udv.js', array('weight' => 1000));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.easing.1.3.js', array('weight' => 1000));
-//      drupal_add_js($vars['path_to_theme'] . 'js/udv-infotv.js', array('weight' => 1000));
-//      break;
-
-
-    case 'infotv':
-      drupal_static_reset('drupal_add_css');
-      drupal_static_reset('drupal_add_js');
-
-      // Tilføjer styelsheets
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/infotv_reset.css', array('group' => CSS_THEME, 'weight' => 100));
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/infotv_flexslider.css', array('group' => CSS_THEME, 'weight' => 100));
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/infotv.css', array('group' => CSS_THEME, 'weight' => 100));
-      // Tilføjer javascripts
-      drupal_add_js($variables['path_to_theme'] . 'js/jquery-1.10.2.min.js', array('weight' => 1000));
-      drupal_add_js($variables['path_to_theme'] . 'js/jquery.flexslider-udv.js', array('weight' => 1000));
-      drupal_add_js($variables['path_to_theme'] . 'js/jquery.easing.1.3.js', array('weight' => 1000));
-      drupal_add_js($variables['path_to_theme'] . 'js/infotv.js', array('weight' => 1000));
-      break;
-
-    case 'uglentopnyheder':
-      // Tilføjer styelsheets
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/infotv_reset.css', array('group' => CSS_THEME, 'weight' => 100));
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/infotv_flexslider.css', array('group' => CSS_THEME, 'weight' => 100));
-      drupal_add_css($variables['path_to_theme'] . 'css/infotv/uglen_forsidenyt.css', array('group' => CSS_THEME, 'weight' => 100));
-      // Tilføjer javascripts
-      drupal_add_js($variables['path_to_theme'] . 'js/jquery.flexslider-min.js', array('weight' => 1000));
-      drupal_add_js($variables['path_to_theme'] . 'js/uglen_forsidenyt.js', array('weight' => 1000));
-      break;
-
-//    default:
-//      // Tilføjer styelsheets
-//      drupal_add_css($vars['path_to_theme'] . 'css/reset.css', array('group' => CSS_THEME, 'weight' => 100));
-//      drupal_add_css($vars['path_to_theme'] . 'css/default.css', array('group' => CSS_THEME, 'weight' => 101));
-//      drupal_add_css($vars['path_to_theme'] . 'css/flexslider.css', array('group' => CSS_THEME, 'weight' => 102));
-//      drupal_add_css($vars['path_to_theme'] . 'css/responsive.css', array('group' => CSS_THEME, 'weight' => 103));
-//      // Tilføjer javascripts
-//      drupal_add_js($vars['path_to_theme'] . 'js/modernizr.custom.60073.js', array('weight' => 100));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.easing.1.3.js', array('weight' => 101));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.hoverIntent.minified.js', array('weight' => 102));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.timer.js', array('weight' => 103));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.flexslider-min.js', array('weight' => 104));
-//      drupal_add_js($vars['path_to_theme'] . 'js/jquery.cookie.js', array('weight' => 105));
-//      drupal_add_js($vars['path_to_theme'] . 'js/pages.js', array('weight' => 106));
-//      drupal_add_js($vars['path_to_theme'] . 'js/front.js', array('weight' => 107));
-//      break;
+    drupal_add_js(drupal_get_path('theme', 'ishoj') . '/static/scripts/editor.js');
   }
 
   $node = &$variables['node'];
@@ -156,10 +68,7 @@ function ishoj_preprocess_page(&$variables) {
     }
   }
 
-
-
 }
-
 
 
 /***********************/
@@ -172,7 +81,7 @@ function ishoj_preprocess_node(&$variables) {
   if(($node->type == 'thomas_tester') or
      ($node->type == 'os2web_base_contentpage') or
      ($node->type == 'os2web_borger_dk_article')){
-    drupal_add_js(path_to_theme() . '/scripts/google-maps.js', array(
+    drupal_add_js(path_to_theme() . '/static//scripts/google-maps.js', array(
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'scope' => 'footer',
@@ -182,30 +91,9 @@ function ishoj_preprocess_node(&$variables) {
   }
   $js  = &$variables['js'];
   $css = &$variables['css'];
-  if($node->type == 'os2web_borger_dk_article'){
-  //    drupal_add_js(drupal_get_path('module', 'os2web_borger_dk') . '/js/os2web_borger_dk.js', 'file');
-//    drupal_add_css(drupal_get_path('module', 'os2web_borger_dk') . '/css/os2web_borger_dk.css', 'file');
-//    unset($js[drupal_get_path('module', 'os2web_borger_dk') . '/js/os2web_borger_dk.js']);
-
-  }
-
-  // MIKS MINIMAP
-  // Tilføjer javascript på noder af typen, os2web_base_contentpage, hvor der er indtastet noget i feltet, Kort
-  // if($node->type == 'os2web_base_contentpage') {
-  //   $field_items = field_get_items('node', $node, 'field_kort');
-  //   if(isset($field_items[0])) {
-  //     drupal_add_js('http://webkort.ishoj.dk/clientapi/minimap2/2.4.x/minimap.js', array(
-  //       // 'group' => JS_THEME,
-  //       // 'preprocess' => TRUE,
-  //       'scope' => 'footer',
-  //       'weight' => '9999',
-  //       )
-  //     );
-  //   }
-  // }
-
 
 }
+
 /*************************/
 /*** hook_form_alter() ***/
 /*************************/
@@ -217,12 +105,14 @@ function ishoj_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+
 /************************/
 /*** hook_css_alter() ***/
 /************************/
 function ishoj_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'os2web_borger_dk') . '/css/os2web_borger_dk.css']);
 }
+
 
 /************************/
 /*** hook_js_alter() ***/
