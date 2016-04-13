@@ -356,21 +356,15 @@ if ($_GET['nid'] and $_GET['ds']) {
         print render($content['comments']);
 
 
-
-
-
-
-
-
-
-
         ?>
-
-
-
-
       </div>
       <!-- CONTENT SLUT -->
+
+      <!-- FOOTER-BG START -->
+      <div class="footer-bg-outer">
+        <div class="footer-bg"></div>
+      </div>
+      <!-- FOOTER-BG SLUT -->
 
       <!-- FOOTER START -->
       <footer data-role="footer">

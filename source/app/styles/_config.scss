@@ -39,6 +39,9 @@ $color-green-light:   #77bd77;
 $color-green-normal:  #53a253;
 $color-green-dark:    #428242;
 
+// Grøn mørk
+$color-green-dark-normal:  #043e21;
+
 // Gul
 $color-yellow-normal: #FCD550;
 
@@ -87,19 +90,6 @@ $bp-large-2:  64em;   // 1024px - Tweakpoint
 $bp-large-3:  72em;   // 1152px - Tweakpoint
 $bp-xlarge:   80em;   // 1280px
 $bp-xlarge-2: 90em;   // 1440px - Tweakpoint
-
-
-//      @include breakpoint($bp-small) {   // 480 px
-//      }
-//      @include breakpoint($bp-medium) {  // 640 px
-//      }
-//      @include breakpoint($bp-large) {   // 960 px
-//      }
-//      @include breakpoint($bp-large-2) { // 1024 px
-//      }
-//      @include breakpoint($bp-xlarge) {  // 1280 px
-//      }
-
 
 
 // Sizing

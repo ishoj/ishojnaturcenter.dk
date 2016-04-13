@@ -516,9 +516,15 @@
       </section>
       <!-- AKTIVITER SLUT -->
 
+      <!-- FOOTER-BG START -->
+      <div class="footer-bg-outer">
+        <div class="footer-bg"></div>
+      </div>
+      <!-- FOOTER-BG SLUT -->
 
       <!-- FOOTER START -->
       <footer data-role="footer">
+
         <div class="container">
           <div class="row">
             <div class="grid-third">
