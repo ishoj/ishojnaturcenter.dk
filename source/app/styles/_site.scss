@@ -1,5 +1,45 @@
 /***   C U S T O M   C S S   ***/
 
+
+// PERSONER
+.person {
+  float: left;
+  width: 100%;
+  margin: 0 0 3em 0;
+  &:first-of-type {
+    margin: 1em 0 3em 0;
+  }
+  &:last-of-type {
+    margin: 0 0 3em 0;
+  }
+  .foto {
+    float: left;
+    width: 100%;
+    img {
+      float: left;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .tekst {
+    float: left;
+    width: 100%;
+  }
+  @media only screen and (min-width: $bp-small) { // 480px
+    .foto {
+      width: 25%;
+    }
+    .tekst {
+      width: 70%;
+      margin-left: 5%;
+      h2 {
+        padding-top: 0;
+        margin-bottom: .75em !important;
+      }
+    }
+  }
+}
+
 // FOOTER-BG
 .footer-bg {
   display: none;

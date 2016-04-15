@@ -262,6 +262,16 @@ $output .= "<section id=\"node-" . $node->nid . "\" class=\"" . $classes . " art
         $output .= "<!-- MIKROARTIKLER SLUT -->";
 
 
+        // PERSONER
+        if($node->field_personer) {
+          $output .= "<!-- PERSONER START -->";
+          $output .= "<div class=\"personer\">";
+            $output .= views_embed_view('personer','default', $node->nid);
+          $output .= "</div>";
+          $output .= "<!-- PERSONER SLUT -->";
+        }
+
+
         // ------------------------------------------------- //
         //  S P E C I F I K K E   I N D H O L D S T Y P E R  //
         // ------------------------------------------------- //
