@@ -309,6 +309,15 @@ $output .= "<section id=\"node-" . $node->nid . "\" class=\"" . $classes . " art
         //  B O K S E  //
         // ----------- //
 
+        // BOKSE [VENSTRE]
+        $output .= '<div class="row bokse-venstre">';
+          $output .= '<div class="grid-full">';
+            $output .= '<div class="row row-start-small match-heights-grid-two-thirds" data-match-heights>';
+              $output .= views_embed_view('forsidebokse','bokse_venstre_side', $node->nid);
+            $output .= '</div>';
+          $output .= '</div>';
+        $output .= '</div>';
+
         // DIVERSE BOKS
         $output .= "<!-- DIVERSE BOKS START -->";
         if($node->field_diverse_boks) {
@@ -381,6 +390,16 @@ $output .= "<section id=\"node-" . $node->nid . "\" class=\"" . $classes . " art
           $block = module_invoke('menu_block', 'block_view', '4');
           $output.= render($block['content']);
         $output .= "</nav>";
+
+        // BOKSE [HØJRE]
+        $output .= '<div class="row bokse-hoejre">';
+          $output .= '<div class="grid-full">';
+            $output .= '<div class="row _row-start-small __match-heights-grid-two-thirds" data-match-heights-off>';
+              $output .= views_embed_view('forsidebokse','bokse_hoejre_side', $node->nid);
+            $output .= '</div>';
+          $output .= '</div>';
+        $output .= '</div>';
+
       $output .= "</div>";
     $output .= "</div>";
   $output .= "</div>";

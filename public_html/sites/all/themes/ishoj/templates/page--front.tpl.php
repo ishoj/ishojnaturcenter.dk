@@ -220,15 +220,6 @@
                   $output .= views_embed_view('selvbetjeningslosning','default', $node->nid);
                   $output .= "<!-- SELBETJENINGSLØSNING SLUT -->";
 
-                  // BOKSE [VENSTRE]
-                  $output .= '<div class="row bokse-venstre">';
-                    $output .= '<div class="grid-full">';
-                      $output .= '<div class="row row-start-small match-heights-grid-two-thirds" data-match-heights>';
-                        $output .= views_embed_view('forsidebokse','bokse_venstre_side', $node->nid);
-                      $output .= '</div>';
-                    $output .= '</div>';
-                  $output .= '</div>';
-
                   // MIKROARTIKLER
                   $output .= "<!-- MIKROARTIKLER START -->";
                   if($node->field_mikroartikler_titel1 or
@@ -298,6 +289,39 @@
                     $output .= $mikroartikel;
                   }
                   $output .= "<!-- MIKROARTIKLER SLUT -->";
+
+
+                  // PERSONER
+                  if($node->field_personer) {
+                    $output .= "<!-- PERSONER START -->";
+                    $output .= "<div class=\"personer\">";
+                      $output .= views_embed_view('personer','default', $node->nid);
+                    $output .= "</div>";
+                    $output .= "<!-- PERSONER SLUT -->";
+                  }
+
+
+                  // ----------- //
+                  //  B O K S E  //
+                  // ----------- //
+
+                  // BOKSE [VENSTRE]
+                  $output .= '<div class="row bokse-venstre">';
+                    $output .= '<div class="grid-full">';
+                      $output .= '<div class="row row-start-small match-heights-grid-two-thirds" data-match-heights>';
+                        $output .= views_embed_view('forsidebokse','bokse_venstre_side', $node->nid);
+                      $output .= '</div>';
+                    $output .= '</div>';
+                  $output .= '</div>';
+
+                  // DIVERSE BOKS
+                  $output .= "<!-- DIVERSE BOKS START -->";
+                  if($node->field_diverse_boks) {
+                    $output .= "<div class=\"diverse-boks\">";
+                    $output .= $node->field_diverse_boks['und'][0]['safe_value'];
+                    $output .= "</div>";
+                  }
+                  $output .= "<!-- DIVERSE BOKS SLUT -->";
 
                   // LÆS OGSÅ
                   $output .= "<!-- LÆS OGSÅ START -->";
