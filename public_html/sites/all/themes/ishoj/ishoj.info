@@ -28,10 +28,3 @@ regions[footer_kontakt]     = Kontakt
 regions[footer_sociale]     = Sociale medier
 regions[footer_hjemmesider] = Andre kommunale hjemmesider
 regions[krisekommunikation]	= Krisekommunikation
-
-;regions[footer]			= Footer
-;regions[header]    	   	= Header
-
-
-; PLUGINS
-plugins[panels][layouts] = 'panels/layouts'

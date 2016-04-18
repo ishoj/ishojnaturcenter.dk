@@ -39,7 +39,17 @@
       color: lighten($color-green-light, 20%);
     }
   }
+  // LOGO
+  .logo-container {
+    a.logo-site {
+      color: lighten($color-green-light, 20%);
+      &:hover {
+        color: $color-green-normal;
+      }
+    }
+  }
 }
+
 
 
 // Breakpoints

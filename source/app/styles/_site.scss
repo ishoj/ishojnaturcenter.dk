@@ -1,6 +1,7 @@
 /***   C U S T O M   C S S   ***/
 
 
+
 // PERSONER
 .person {
   float: left;
@@ -32,10 +33,6 @@
     .tekst {
       width: 70%;
       margin-left: 5%;
-      h2 {
-        padding-top: 0;
-        margin-bottom: .75em !important;
-      }
     }
   }
 }
@@ -43,6 +40,24 @@
 // FOOTER-BG
 .footer-bg {
   display: none;
+}
+
+// FOOTER
+[data-role="footer"] {
+  // LOGO
+  .logo-container {
+    a.logo-site {
+      color: $color-light-gray-dark;
+      &:hover {
+        color: $color-link-dark;
+      }
+    }
+  }
+  .grid-third {
+    &:first-of-type {
+      float: left;
+    }
+  }
 }
 
 // MATCH-HEIGHTS FORSIDE BOKSE
