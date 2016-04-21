@@ -197,7 +197,7 @@
                   // UNDEROVERSKRIFT
                   $output .= "<!-- UNDEROVERSKRIFT START -->";
                   if($node->field_os2web_base_field_summary) {
-                    $output .= "<h2>" . $node->field_os2web_base_field_summary['und'][0]['safe_value'] . "</h2>";
+                    // $output .= "<h2>" . $node->field_os2web_base_field_summary['und'][0]['safe_value'] . "</h2>";
                   }
                   $output .= "<!-- UNDEROVERSKRIFT SLUT -->";
 
