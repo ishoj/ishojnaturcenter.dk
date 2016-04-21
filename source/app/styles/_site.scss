@@ -78,7 +78,7 @@
     width: 100%;
     &:hover {
       p {
-        padding-bottom: calc-em(24px);
+        padding-bottom: calc-em(24px) !important;
         text-decoration: none;
       }
     }
@@ -88,7 +88,7 @@
       left: 0;
       width: 100%;
       margin: 0;
-      padding: calc-em(8px) 1em calc-em(10px);
+      padding: calc-em(8px) 1em calc-em(10px) !important;
       background-color: rgba(10,21,31,.8);
       color: $color-white;
       @extend h3;
